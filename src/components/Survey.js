@@ -5,7 +5,6 @@ var uuid = require('uuid');
 // Initialize Firebase
 
 
-firebase.initializeApp(config);
 
 class Survey extends Component {
     constructor(props) {
@@ -34,14 +33,27 @@ class Survey extends Component {
         })
     }
 
+    // Answer Selected Radio buttons
+    answerSelected(event) {
+        let answers = this.state.answers;
+
+        if ( event.target.name === 'answer1' ) {
+            answers.answer1 = event.target.value;
+        } else if ( event.target.name === 'answer2' ) {
+            answers.answer2 = event.target.value;
+        } else if ( event.target.name === 'answer3' ) {
+            answers.answer3 = event.target.value;
+        }
+
+        this.setState( { answers: answers }, () => {
+            console.log(this.state)
+        } )
+    }
+
+
     // Question form
     questionSubmitted() {
         // Todo
-    }
-
-    // Answer Selected Radio buttons
-    answerSelected() {
-        //todo 
     }
     
     render() {
