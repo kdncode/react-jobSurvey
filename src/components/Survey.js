@@ -3,8 +3,15 @@ var firebase = require('firebase');
 var uuid = require('uuid');
 
 // Initialize Firebase
-
-
+var config = {
+    apiKey: "xxx",
+    authDomain: "xxx",
+    databaseURL: "xxx",
+    projectId: "xxx",
+    storageBucket: "xxx",
+    messagingSenderId: "xxx"
+  };
+  firebase.initializeApp(config);
 
 class Survey extends Component {
     constructor(props) {
@@ -12,7 +19,7 @@ class Survey extends Component {
         
         this.state = {
             uid: uuid.v1(),
-            studentName: 'Wick',
+            studentName: '',
             answers: {
                 answer1: '',
                 answer2: '',
@@ -51,9 +58,13 @@ class Survey extends Component {
     }
 
 
-    // Question form
+    // Question form with Firebase
     questionSubmitted() {
-        // Todo
+       firebase.database().ref('jobSurvey/'+ this.state.uid).set({
+           studentName: this.state.studentName,
+           answers: this.state.answers
+       });
+       this.setState({ isSubmitted: true})
     }
     
     render() {
