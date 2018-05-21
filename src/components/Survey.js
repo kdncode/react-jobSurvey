@@ -19,7 +19,7 @@ class Survey extends Component {
         
         this.state = {
             uid: uuid.v1(),
-            studentName: '',
+            studentName: 'abc',
             answers: {
                 answer1: '',
                 answer2: '',

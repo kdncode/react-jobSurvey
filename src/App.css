@@ -31,3 +31,47 @@
   font-size: 25px;
   padding: 10px;
 }
+
+.card {
+  padding: 10px 0px;  
+  color: #505050;
+  background: #68ff8d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #68ff8d, #6ab3e0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #68ff8d, #6ab3e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+input[type="radio"] {
+  margin: 15px 5px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.feedback-button {
+  width: 50%;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 7px;
+  border: none;
+  padding: 20px 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  background: #ff7a7a;
+  background-image: linear-gradient(to right, #ff7a7a, #fe6c99, #ed68be, #c671e2, #7e80ff);
+  -moz-box-shadow: -9px 12px 27px #b5acac;
+  -webkit-box-shadow: -9px 12px 27px #b5acac;
+  box-shadow: -9px 12px 27px #b5acac;
+
+}
+
+.feedback-button:hover {
+  background: #fd3333;
+  background-image: linear-gradient(to right, #fd3333, #634bff);
+  -moz-box-shadow: -9px 12px 27px #b5acac;
+  -webkit-box-shadow: -9px 12px 27px #b5acac;
+  box-shadow: -9px 12px 27px #b5acac;
+}
